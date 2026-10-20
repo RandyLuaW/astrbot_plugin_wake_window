@@ -1,6 +1,6 @@
 # Wake Window: keep the conversation going after one @mention
 
-> AstrBot plugin · Window extends on each reply; per-group, with cooldown
+> AstrBot plugin · Pass-through extends the window, per group
 
 ## The problem
 
