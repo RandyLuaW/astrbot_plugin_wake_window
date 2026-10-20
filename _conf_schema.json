@@ -1,0 +1,39 @@
+{
+  "enabled": {
+    "type": "bool",
+    "default": true,
+    "description": "启用。关掉后群聊恢复成每条都要 @ 才能唤醒。"
+  },
+  "window_seconds": {
+    "type": "int",
+    "default": 120,
+    "description": "被 @ 之后多少秒内继续接话。每放行一条会续窗，对话持续时窗口不断。"
+  },
+  "wake_cooldown_seconds": {
+    "type": "int",
+    "default": 90,
+    "description": "同一个群两次主动唤醒的最小间隔。窗口内每句话都会唤醒她，不加冷却就变成逐条回复。",
+    "hint": "被 @ 不受这个限制，但会把冷却计时重置。"
+  },
+  "merge_previous_seconds": {
+    "type": "int",
+    "default": 90,
+    "description": "先发图、再 @ 她时，往回找多久以内的消息并进来。",
+    "hint": "群里「发图 → 打几行字 → 再 @ 她」很容易超过 30 秒，所以默认给到 90。"
+  },
+  "merge_max_messages": {
+    "type": "int",
+    "default": 3,
+    "description": "最多并进来几条前面的消息。"
+  },
+  "groups": {
+    "type": "list",
+    "default": [],
+    "description": "只在这些群生效（填群号）。留空 = 所有群。"
+  },
+  "log": {
+    "type": "bool",
+    "default": false,
+    "description": "打日志看开窗/续窗（排查用，平时关掉）。"
+  }
+}

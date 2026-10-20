@@ -1,0 +1,13 @@
+name: astrbot_plugin_wake_window
+display_name: 群聊接话窗口
+desc: "被 @ 一次之后，接下来几句不用再 @ 她。AstrBot 的唤醒判定是逐条的，每条群消息都要 @ 或唤醒前缀，所以真实对话里『@ 她 → 她回一句 → 你接着说 → 没人理』。本插件记住每个群最近一次被接住的时间，窗口内放行普通消息并续窗；窗口外照旧拦掉；@ 了别人不插嘴；命令仍走原路。窗口默认 180 秒，按群独立。"
+short_desc: 被 @ 后的一段时间内，群里说话不用再 @
+author: Randy Lua
+repo: https://github.com/RandyLuaW/astrbot_plugin_wake_window
+version: 1.1.0
+astrbot_version: ">=4.24.0"
+support_platforms:
+  - aiocqhttp
+tags:
+  - 群聊
+  - 交互
